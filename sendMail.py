@@ -2,12 +2,6 @@
 '''
 发送html文本邮件
 '''
-#init mail information
-mailto_list=["robocopbatman@163.com"] 
-mail_host="smtp.163.com"  #设置服务器
-mail_user="robocopbatman"    #用户名
-mail_pass=",zhaoming."   #口令 
-mail_postfix="163.com"  #发件箱的后缀
 
 import smtplib  
 from email.mime.text import MIMEText  
@@ -28,7 +22,15 @@ def send_mail(to_list,sub,content):  #to_list：收件人；sub：主题；conte
     except Exception, e:  
         print str(e)  
         return False  
-if __name__ == '__main__':  
+
+
+if __name__ == '__main__':
+    mailto_list=["robocopbatman@163.com"] 
+    mail_host="smtp.163.com"  #设置服务器
+    mail_user="robocopbatman"    #用户名
+    mail_pass=",zhaoming."   #口令 
+    mail_postfix="163.com"  #发件箱的后缀
+    
     if send_mail(mailto_list,"test","<a href='http://mail.163.com'>zmming</a>"):  
         print "发送成功"  
     else:  
