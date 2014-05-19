@@ -20,16 +20,16 @@ def send_mail(to_list,sub,content):  #to_list：收件人；sub：主题；conte
         s.close()  
         return True  
     except Exception, e:  
-        print str(e)  
+        print str(e)#print error log
         return False  
 
 
 if __name__ == '__main__':
-    mailto_list=["robocopbatman@163.com"] 
-    mail_host="smtp.163.com"  #设置服务器
-    mail_user="robocopbatman"    #用户名
-    mail_pass=",zhaoming."   #口令 
-    mail_postfix="163.com"  #发件箱的后缀
+    mailto_list=["shoujianren@y.com"] 
+    mail_host="smtp.z.com"  #设置服务器
+    mail_user="fajianren"    #用户名
+    mail_pass="*****"   #口令 
+    mail_postfix="z.com"  #发件箱的后缀
     
     if send_mail(mailto_list,"test","<a href='http://mail.163.com'>zmming</a>"):  
         print "发送成功"  
